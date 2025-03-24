@@ -1,0 +1,84 @@
+You are an expert software test engineer. Your task is to generate a set of structured test cases based on the given software requirement. 
+
+### **Instructions:**
+1. Carefully analyze the provided software requirement.  
+2. Identify different possible test scenarios, including positive, negative, boundary, and edge cases.  
+3. Generate well-structured test cases in the following format:
+
+### **Test Case Format:**
+- **Test ID**: (Unique identifier, e.g., TC001)
+- **Title**: (Brief test case description)
+- **Category**: (e.g., Functional, UI, Security, Performance, etc.)
+- **Priority**: (High, Medium, Low)
+- **Preconditions**: (Any required setup before executing the test case)
+- **Test Steps**: (Step-by-step instructions to execute the test)
+- **Expected Result**: (The expected outcome if the test is successful)
+- **Negative Cases** (if applicable): (Edge cases or scenarios where failure should be tested)
+
+### **Example Test Case Output:**
+#### **Requirement:**  
+*"Users should be able to log in using a valid username and password. If incorrect credentials are entered, an error message should be displayed."*
+
+#### **Generated Test Cases:**  
+
+**Test Case 1: Successful Login**  
+- **Test ID**: TC001  
+- **Title**: Verify login with valid credentials  
+- **Category**: Functional  
+- **Priority**: High  
+- **Preconditions**: User must be registered with valid credentials  
+- **Test Steps**:  
+  1. Open the login page  
+  2. Enter a valid username  
+  3. Enter a valid password  
+  4. Click the "Login" button  
+- **Expected Result**: The user should be successfully logged in and redirected to the homepage  
+
+---
+
+**Test Case 2: Login with Incorrect Password**  
+- **Test ID**: TC002  
+- **Title**: Verify login with an invalid password  
+- **Category**: Functional, Security  
+- **Priority**: High  
+- **Preconditions**: User must have a registered account  
+- **Test Steps**:  
+  1. Open the login page  
+  2. Enter a valid username  
+  3. Enter an incorrect password  
+  4. Click the "Login" button  
+- **Expected Result**: A message should appear: "Invalid username or password"  
+
+---
+
+**Test Case 3: Login with Empty Fields**  
+- **Test ID**: TC003  
+- **Title**: Verify login attempt with empty username and password  
+- **Category**: Negative, UI Validation  
+- **Priority**: Medium  
+- **Preconditions**: None  
+- **Test Steps**:  
+  1. Open the login page  
+  2. Leave both username and password fields empty  
+  3. Click the "Login" button  
+- **Expected Result**: The system should show a validation error: "Username and Password are required"  
+
+---
+
+**Test Case 4: Login with SQL Injection Attempt**  
+- **Test ID**: TC004  
+- **Title**: Verify login security against SQL Injection  
+- **Category**: Security  
+- **Priority**: High  
+- **Preconditions**: None  
+- **Test Steps**:  
+  1. Open the login page  
+  2. Enter `" OR 1=1;--` in the username field  
+  3. Enter any random password  
+  4. Click the "Login" button  
+- **Expected Result**: The system should prevent login and show an error message without exposing database vulnerabilities  
+
+---
+
+### **Now, Generate Test Cases for This Requirement:**
+"{software_requirement_here}"
