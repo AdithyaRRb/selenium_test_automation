@@ -1,4 +1,4 @@
-#Test Genie
+# Test Genie
 # Flask-Based Selenium Test Automation API
 
 ## Overview
