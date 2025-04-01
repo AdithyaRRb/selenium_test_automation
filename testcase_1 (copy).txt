@@ -1,0 +1,25 @@
+Test Case: Purchase a Product & Stop at Payment Page
+Website: SauceDemo
+URL: https://www.saucedemo.com
+
+Test Steps:
+Open the SauceDemo login page.
+Enter Username: standard_user.
+Enter Password: secret_sauce.
+Click the Login button.
+Verify that the user lands on the Products page.
+Click on the second product (e.g., "Sauce Labs Bike Light").
+Click "Add to Cart".
+Click on the Cart icon to view the cart.
+Click "Checkout".
+Enter the following checkout details:
+First Name: John
+Last Name: Doe
+Zip Code: 12345
+Click "Continue".
+Stop execution at the payment page (do not complete the transaction).
+Expected Result:
+The user successfully navigates to the checkout payment page.
+The correct product is added to the cart.
+Execution stops at the payment page without completing the transaction.
+
